@@ -49,7 +49,7 @@ router.get("/users/:data", middle_ware, (req, res) => {
 });
 
 router.put("/users/:id", middle_ware, (req, res) => {
-    const id = req.params.id;   
+    const id = req.params.id;
     const { email, password, firstname, name } = req.body;
 
     if (!email || !password || !firstname || !name) {
