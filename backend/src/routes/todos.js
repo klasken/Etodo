@@ -38,6 +38,7 @@ router.post("/", middle_ware, (req, res) => {
     if (!title || !description || !due_time || !status || !user_id) {
         return res.status(400).json({ "msg": "Bad parameter" });
     }
+
     pool.query(
         "INSERT INTO todo (title, description, due_time, status, user_id) VALUES (?, ?, ?, ?, ?)",
         [title, description, due_time, status, user_id],
@@ -60,6 +61,7 @@ router.put("/:id", middle_ware, (req, res) => {
     if (!title || !description || !due_time || !status || !user_id) {
         return res.status(400).json({ "msg": "Bad parameter" });
     }
+
     pool.query(
         "UPDATE todo SET title = ?, description = ?, due_time = ?, status = ?, user_id = ? WHERE id = ?",
         [title, description, due_time, status, user_id, id],
