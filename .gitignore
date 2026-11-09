@@ -1,12 +1,20 @@
-.env
-.vscode/
-.alcache/
+# Dépendances
 node_modules/
-.alpackages/
-.snapshots/
-.output/
-*.app
-rad.json
-*.g.xlf
-*.flf
-TestResults.xml
+
+# Build
+dist/
+
+# Variables d'environnement (ne jamais versionner les secrets)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Éditeurs et système
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
